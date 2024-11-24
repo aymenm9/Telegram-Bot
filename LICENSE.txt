@@ -1,0 +1,10 @@
+This source code is provided for reference purposes only.
+You are not permitted to:
+
+1. Copy, modify, or distribute this code in any form.
+2. Use this code for any commercial or non-commercial purpose.
+3. Fork this repository or host any derivative work.
+
+By accessing this code, you agree to abide by these terms.
+
+Copyright © [Merad Aymen El Hadi] [2024]. All rights reserved.
