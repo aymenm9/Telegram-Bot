@@ -51,5 +51,5 @@ or
     SOCIAL_MEDIA:dict # {'name' : 'link'}
     CONTACT:dict # {'name' : 'val'}
     RESUME:dict # {'name' : 'link'}
-    PROJECTS:dict # {'name' : {str : str},}
+    PROJECTS:dict # {'name' : {str : str}}
     SKILLS:list
