@@ -34,6 +34,7 @@ Click the link below to chat with the bot directly on Telegram:
     git clone https://github.com/yourusername/aymenDevBot.git
     cd aymenDevBot
     pip install -r req.txt
+    cd bot
 
 2. Create my_info.py
 
@@ -53,3 +54,8 @@ or
     RESUME:dict # {'name' : 'link'}
     PROJECTS:dict # {'name' : {str : str}}
     SKILLS:list
+
+4. Run the bot
+
+    ```bash
+    python3 main.py
