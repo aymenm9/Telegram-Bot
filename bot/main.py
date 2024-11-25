@@ -8,47 +8,48 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_markdown_v2(
-        "ℹ️ *Help Menu* \n\n"
+        " *Help Menu* \n\n"
         "Here are the commands you can use:\n"
-        "\- `/start` : Welcome message and introduction\.\n"
-        "\- `/resume` : Get a copy of my resume\.\n"
-        "\- `/projects` : View details of my projects\.\n"
-        "\- `/skills` : See my technical skills\.\n"
-        "\- `/contact` : Get my contact information\.\n"
-        "\- `/social_media` : Access my GitHub and LinkedIn links\.\n"
+        "\- /start : Welcome message and introduction\.\n"
+        "\- /resume : Get a copy of my resume\.\n"
+        "\- /projects : View details of my projects\.\n"
+        "\- /skills : See my technical skills\.\n"
+        "\- /contact : Get my contact information\.\n"
+        "\- /social\_media : Access my GitHub and LinkedIn links\.\n"
     )
 
 async def resume_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     resume:str = ""
     for key,val in RESUME.items():
         resume += f'{key} : {val} \n'
-    await update.message.reply_markdown_v2(
-        "**Aymen Resume**\n\n"
+    await update.message.reply_text(
+        "Aymen Resume\n\n"
         f"{resume}"
     )
 
 async def projects_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
-    projects_str:str = '' 
+    projects_str:str = 'My Projects \n\n.' 
     for key0, val0 in PROJECTS.items():
-        projects_str += f'*{key0}*\n'
+        projects_str += f'{key0}\n'
         for key1, val1 in val0.items():
-            projects_str += f'\t{key1} : {val1}\n'
-    await update.message.reply_markdown_v2(projects_str)
+            projects_str += f'- {key1} : {val1}\n'
+        projects_str += f'\n\n'
+    await update.message.reply_text(projects_str)
 
 async def skills_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_markdown_v2(', '.join(SKILLS))
+    await update.message.reply_text(', '.join(SKILLS))
     
 async def contact_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    cont = f'**My contact info**\n\n'
+    cont = f'My contact info\n\n'
     for key, val in CONTACT.items():
-        cont += f'**{key}** : {val}\n'
-    await update.message.reply_markdown_v2(cont)
+        cont += f'{key} : {val}\n'
+    await update.message.reply_text(cont)
 
 async def social_media_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    cont = f'**My Social Media**\n\n'
+    cont = f'My Social Media\n\n'
     for key, val in SOCIAL_MEDIA.items():
-        cont += f'**{key}** : {val}\n'
+        cont += f'{key} : {val}\n'
     await update.message.reply_markdown_v2(cont)
 
 # Create the bot application
@@ -66,4 +67,4 @@ application.add_handler(CommandHandler("social_media", social_media_command))
 # Run the bot
 if __name__ == "__main__":
     print("Bot is running...")
-    application.run_polling()
+    application.run_polling(poll_interval=3)
