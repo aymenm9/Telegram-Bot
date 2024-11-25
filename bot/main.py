@@ -30,10 +30,10 @@ async def resume_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def projects_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     projects_str:str = 'My Projects \n\n.' 
-    for key0, val0 in PROJECTS.items():
-        projects_str += f'{key0}\n'
-        for key1, val1 in val0.items():
-            projects_str += f'- {key1} : {val1}\n'
+    for title, project_info in PROJECTS.items():
+        projects_str += f'{title}\n'
+        for key, val in project_info.items():
+            projects_str += f'- {key} : {val}\n'
         projects_str += f'\n\n'
     await update.message.reply_text(projects_str)
 

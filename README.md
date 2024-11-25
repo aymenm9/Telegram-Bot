@@ -31,8 +31,25 @@ Click the link below to chat with the bot directly on Telegram:
 1. Clone this repository:
 
     ```bash
-        git clone https://github.com/yourusername/aymenDevBot.git
-        cd aymenDevBot
-        pip install -r requirements.txt
-    
+    git clone https://github.com/yourusername/aymenDevBot.git
+    cd aymenDevBot
+    pip install -r req.txt
 
+2. Create my_info.py
+
+    ```bash
+    touch my_info.py
+or 
+    ```bash
+    code my_info.py
+
+3. Add your info
+
+    ```python
+    API_KEY:str
+    BOT_USERNAME:str
+    SOCIAL_MEDIA:dict # {'name' : 'link'}
+    CONTACT:dict # {'name' : 'val'}
+    RESUME:dict # {'name' : 'link'}
+    PROJECTS:dict # {'name' : {str : str},}
+    SKILLS:list
