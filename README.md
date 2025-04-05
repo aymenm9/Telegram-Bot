@@ -2,6 +2,8 @@
 
 AymenDevBot is an open-source Telegram bot designed to showcase my resume, projects, technical skills, and social media links. You can use this bot as a personal assistant or customize it for your own needs.
 
+![1732629212767](https://github.com/user-attachments/assets/b680c54f-04a5-437c-ba63-c785615bfbdd)
+
 ## Features
 
     - View my resume and contact information.
